@@ -1,7 +1,12 @@
 export class Message {
+    public readonly id: string;
     title: string;
     message: string;
     isSent: boolean;
+
+    constructor(id: string) {
+        this.id = id;
+    }
 }
 
 export class Messages extends Array<Message> {
@@ -14,4 +19,10 @@ export class Messages extends Array<Message> {
     }
 }
 
-Messages.getValidMessages([])
+Messages.getValidMessages([]);
+
+const message = new Message('%$&^*%^');
+// with readonly we can read it
+message.id;
+// with readonly we can't write it
+// message.id = ')(*(^$';
