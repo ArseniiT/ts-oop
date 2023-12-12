@@ -8,4 +8,8 @@ export class Animal {
         this.legs = legs;
         this.name = name;
     }
+
+    meow(): string {
+        return 'roar';
+    }
 }
