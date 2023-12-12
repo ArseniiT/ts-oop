@@ -37,6 +37,6 @@ const message = new Message(
 
 // test
 
-message.isSent = true
+message.isSent = true;
 message.messageStatus;
 message.previewMessage();
