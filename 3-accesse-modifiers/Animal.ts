@@ -1,6 +1,6 @@
 export class Animal {
-    public age: number;
-    private legs: number;
+    protected age: number;
+    legs: number;
     name: string;
 
     constructor(age: number, legs: number, name: string) {
@@ -10,16 +10,22 @@ export class Animal {
     }
 }
 
+// child
 export class Cat extends Animal {
     constructor(data: {age: number, legs: number, name: string}) {
         super(data.age, data.legs, data.name);
     }
-
-    // get ourLegs() {
-    //     return this.legs;
-    // }
+    get birthday(): number {
+        return this.age + 1;
+    }
 }
 
 const cat = new Cat({age: 19, legs: 4, name: 'Piki'});
-cat.age;
-// cat.legs;
+cat.age; // error cause protected
+
+// shape
+export class Dog implements Animal { // error cause protected
+    // age: number;
+    legs: number;
+    name: string;
+}
