@@ -21,11 +21,13 @@ export class Cat extends Animal {
 }
 
 const cat = new Cat({age: 19, legs: 4, name: 'Piki'});
-cat.age; // error cause protected
+// error cause protected
+// cat.age;
 
 // shape
-export class Dog implements Animal { // error cause protected
-    // age: number;
-    legs: number;
-    name: string;
-}
+// error cause protected
+// export class Dog implements Animal {
+//     age: number;
+//     legs: number;
+//     name: string;
+// }
