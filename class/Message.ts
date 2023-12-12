@@ -9,3 +9,5 @@ function Message2(title, message, id) {
     this.message = message;
     this.id = id;
 }
+
+const message2 = new Message2('Radius', 'Sun', 696340);
